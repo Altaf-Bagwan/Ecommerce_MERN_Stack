@@ -85,7 +85,7 @@ const productSchema = new mongoose.Schema({
 
 app.use(cors({
   // origin: 'http://localhost:3000',
-  origin: 'https://stellular-gumption-ba2b4e.netlify.app',
+  origin: 'https://cosmic-platypus-8127dc.netlify.app/',
   methods: ['GET','POST','DELETE'],
   credentials : true
 }));
