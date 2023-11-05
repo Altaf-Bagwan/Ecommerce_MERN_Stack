@@ -84,7 +84,8 @@ const productSchema = new mongoose.Schema({
 
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  // origin: 'http://localhost:3000',
+  origin: 'https://stellular-gumption-ba2b4e.netlify.app',
   methods: ['GET','POST','DELETE'],
   credentials : true
 }));
