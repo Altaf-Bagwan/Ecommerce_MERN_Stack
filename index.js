@@ -6,6 +6,11 @@ const bodyParser = require('body-parser');
 const session = require('express-session')
 const multer  = require('multer')
 const PORT = process.env.PORT || 8080;
+const path = require('path')
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const DB =process.env.DB;
 const ADMIN_ID = process.env.ADMIN_ID;
@@ -100,6 +105,10 @@ app.use(session({
   saveUninitialized: true,
   cookie: { secure: false }
 }))
+
+app.use(express.static(path.join(__dirname,'./client/build')));
+
+
 app.use(express.static('uploads'))
 let img='';
 let imgArray = [];
@@ -119,6 +128,11 @@ app.post('/createProduct',(req,res)=>{
     })
    imgArray=[];
 })
+
+app.use('*',function(req,res){
+  res.sendFile(path.join(__dirname,'./client/build/index.html'));
+})
+
 app.post('/photo', upload.single('image'), function (req, res, next) {
   img = req.file.filename
   res.send(img);
