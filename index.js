@@ -7,10 +7,6 @@ const session = require('express-session')
 const multer  = require('multer')
 const PORT = process.env.PORT || 8080;
 const path = require('path')
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 const DB =process.env.DB;
 const ADMIN_ID = process.env.ADMIN_ID;
@@ -89,8 +85,8 @@ const productSchema = new mongoose.Schema({
 
 
 app.use(cors({
-  origin: 'http://localhost:3000',
-  // origin: 'https://cosmic-platypus-8127dc.netlify.app',
+  // origin: 'http://localhost:3000',
+  origin: 'https://thoughtful-swimsuit-cow.cyclic.app',
   methods: ['GET','POST','DELETE'],
   credentials : true
 }));
