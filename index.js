@@ -84,11 +84,13 @@ const productSchema = new mongoose.Schema({
 
 
 app.use(cors({
-  // origin: 'http://localhost:3000',
-  origin: 'https://cosmic-platypus-8127dc.netlify.app',
+  origin: 'http://localhost:3000',
+  // origin: 'https://cosmic-platypus-8127dc.netlify.app',
   methods: ['GET','POST','DELETE'],
   credentials : true
 }));
+// app.use(cors());
+
 app.use(bodyParser.json({limit:'500mb',extended:true}));
 app.use(bodyParser.urlencoded({limit:'500mb',extended:true, parameterLimit:100000}));
 app.use(express.json({limit:'500mb',extended:true}));
@@ -96,7 +98,7 @@ app.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: true,
-  cookie: { secure: true }
+  cookie: { secure: false }
 }))
 app.use(express.static('uploads'))
 let img='';
@@ -220,7 +222,7 @@ app.delete(`/emptyCart`, (req,res)=>{
   })
 })
 app.post('/login', (req,res)=>{
-  
+
   User.findOne({email:req.body.email, password:req.body.password}).then(result=>{
     if(result){
       req.session.user = result;
