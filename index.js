@@ -126,9 +126,7 @@ app.post('/createProduct',(req,res)=>{
    imgArray=[];
 })
 
-app.use('*',function(req,res){
-  res.sendFile(path.join(__dirname,'./client/build/index.html'));
-})
+
 
 app.post('/photo', upload.single('image'), function (req, res, next) {
   img = req.file.filename
@@ -443,7 +441,9 @@ app.get('/logout',(req,res)=>{
   req.session.user = null;
   res.send({status:true})
 })
-
+app.use('*',function(req,res){
+  res.sendFile(path.join(__dirname,'./client/build/index.html'));
+})
 app.listen(PORT,()=>{
     console.log('listen on PORT:',PORT)
 })
