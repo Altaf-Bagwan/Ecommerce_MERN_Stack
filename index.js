@@ -84,12 +84,12 @@ const productSchema = new mongoose.Schema({
   const Orders= mongoose.model('Orders',ordersSchema);
 
 
-app.use(cors({
-  // origin: 'http://localhost:3000',
-  origin: 'https://thoughtful-swimsuit-cow.cyclic.app',
-  methods: ['GET','POST','DELETE'],
-  credentials : true
-}));
+// app.use(cors({
+//   // origin: 'http://localhost:3000',
+//   origin: 'https://thoughtful-swimsuit-cow.cyclic.app',
+//   methods: ['GET','POST','DELETE'],
+//   credentials : true
+// }));
 // app.use(cors());
 
 
