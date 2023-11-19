@@ -46,7 +46,7 @@ Contributions are welcome! If you find a bug, have an idea for a new feature, or
 
 ![Screenshot (74)](https://github.com/Altaf-Bagwan/Ecommerce_MERN_Stack/assets/128160849/722ac94e-51d1-4020-8bfd-c2c26a0ef386)
 
-![Screenshot (75)](https://github.com/Altaf-Bagwan/Ecommerce_MERN_Stack/assets/128160849/51452414-fd9c-4806-8a32-8054c116a348)
+![Screenshot (80)](https://github.com/Altaf-Bagwan/Ecommerce_MERN_Stack/assets/128160849/1b660926-0cf1-48ae-9240-7aa4e893c242)
 
 ![Screenshot (73)](https://github.com/Altaf-Bagwan/Ecommerce_MERN_Stack/assets/128160849/20561a19-b9aa-42d7-a8e9-82ceda466113)
 
